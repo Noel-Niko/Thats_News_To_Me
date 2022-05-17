@@ -1,0 +1,266 @@
+{
+    "status": "ok",
+    "totalResults": 38,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "BioSpace"
+            },
+            "author": "Rosemary Scott",
+            "title": "Researchers Pinpoint Important Biomarker for SIDS - Updated - BioSpace",
+            "description": "Researchers released a study that has identified the first biochemical marker that could help detect babies more at risk of Sudden Infant Death Syndrome (SIDS) while they are alive.",
+            "url": "https://www.biospace.com/article/researchers-answer-how-and-why-infants-die-from-sids/",
+            "urlToImage": "https://www.biospace.com/getasset/bae8d5ab-791d-40ac-b9ed-2e44427100dd/;w=625;h=350",
+            "publishedAt": "2022-05-16T14:32:47Z",
+            "content": "Sudden infant death syndrome (SIDS) accounts for about 37% of sudden unexpected infant deaths a year in the U.S., and the cause of SIDS has remained largely unknown. On Saturday, researchers from The… [+3277 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Dakin Andone and Amir Vera, CNN",
+            "title": "Buffalo shooting victims: 'Hero' guard and a teacher who was a 'pillar of the community' are among 10 killed - CNN",
+            "description": "Thirteen people were shot -- 10 fatally -- at a Buffalo, New York, supermarket Saturday in a massacre authorities believe was racially motivated.",
+            "url": "https://www.cnn.com/2022/05/15/us/buffalo-shooting-victims-what-we-know/index.html",
+            "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220515124434-victims-buffalo-shooting-super-tease.jpg",
+            "publishedAt": "2022-05-16T14:05:00Z",
+            "content": "(CNN)A retired police lieutenant. A substitute teacher who was a \"pillar of the community.\" A loving mother and wife. A beloved auntie. \r\nThirteen people, ages 20 to 86, were shot. Eleven were Black … [+7942 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "The Guardian"
+            },
+            "author": "https://www.theguardian.com/profile/richardluscombe,https://www.theguardian.com/profile/victoria-bekiempis",
+            "title": "Senate to vote on $40bn Ukraine aid bill initially blocked by Rand Paul – live - The Guardian US",
+            "description": "A preliminary vote on military, humanitarian and economic aid to Kyiv is expected today, setting up a final vote on Wednesday",
+            "url": "https://www.theguardian.com/us-news/live/2022/may/16/us-ukraine-aid-bill-vote-joe-biden-baby-formula-inflation-latest-news",
+            "urlToImage": "https://i.guim.co.uk/img/media/39efb87767f18b26811c32bbc3989482b47975f3/0_163_4896_2938/master/4896.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctbGl2ZS5wbmc&enable=upscale&s=13e58699eb319800abecbbe56826372d",
+            "publishedAt": "2022-05-16T14:03:35Z",
+            "content": "Biden's Ukraine package edges closer to approval\r\nJoe Biden might finally score a victory for his Ukraine aid package as early as Wednesday after the Senate made moves on Monday to overcome the resis… [+9840 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Emma Roth, Richard Lawler",
+            "title": "Sony's new PlayStation Plus subscriptions launch June 13th, and here's the list of games - The Verge",
+            "description": "Sony is finally ready to respond to Xbox Game Pass with its own gaming subscription package and will launch a revamped PlayStation Plus with three tiers (Essential, Extra, and Premium) in the US on June 13th.",
+            "url": "https://www.theverge.com/2022/5/16/23074725/playstation-plus-premium-extra-launch-date-games",
+            "urlToImage": "https://cdn.vox-cdn.com/thumbor/ELzHPk9tO0WbQZ8BdtGSkV9AO04=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23426446/playstation_plus_logo_blog.jpg",
+            "publishedAt": "2022-05-16T13:33:15Z",
+            "content": "Ghost of Tsushima Directors Cut, Assassins Creed Valhalla, and NBA 2K22 are just some of the games included\r\nImage: Sony\r\nSony has confirmed the launch date and other details for the three new PlaySt… [+7950 chars]"
+        },
+        {
+            "source": {
+                "id": "the-wall-street-journal",
+                "name": "The Wall Street Journal"
+            },
+            "author": "Will Horner",
+            "title": "Stocks Open Lower to Start the Week - The Wall Street Journal",
+            "description": "Weak Chinese economic data showed the cost of strict Covid-19 lockdowns",
+            "url": "https://www.wsj.com/articles/global-stocks-markets-dow-update-05-16-2022-11652686614",
+            "urlToImage": "https://images.wsj.net/im-544867/social",
+            "publishedAt": "2022-05-16T13:33:00Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "New York Times"
+            },
+            "author": "Andrew Ross Sorkin",
+            "title": "Ben Bernanke Sees ‘Stagflation’ Ahead - The New York Times",
+            "description": "The former chairman of the Federal Reserve has a new book out on Tuesday explaining the powers of the Fed and Congress to juice or slow our economy amid a supply-chain crunch and sky-high demand.",
+            "url": "https://www.nytimes.com/2022/05/16/business/ben-bernanke-predicts-stagflation.html",
+            "urlToImage": "https://static01.nyt.com/images/2022/05/16/us/16dealbook-ben/16dealbook-ben-facebookJumbo.jpg",
+            "publishedAt": "2022-05-16T13:23:54Z",
+            "content": "Standing in his kitchen one morning in Washington, D.C., and drinking a glass of lightly flavored water, Ben Bernanke is wearing a gray suit, a button-down shirt, no tie and a pair of Brooks running … [+1891 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Lisa Respers France, CNN",
+            "title": "Machine Gun Kelly dedicates Billboard Music Awards performance to his 'wife' and 'unborn child' - CNN",
+            "description": "Was Machine Gun Kelly trying to tell us something during his performance of \"Twin Flame\"?",
+            "url": "https://www.cnn.com/2022/05/16/entertainment/machine-gun-kelly-billboard-awards-dedication/index.html",
+            "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220516130219-machine-gun-kelly-super-tease.jpg",
+            "publishedAt": "2022-05-16T13:14:00Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "YouTube"
+            },
+            "author": null,
+            "title": "Best Luka Doncic Moments Of Mavericks vs Suns Series - NBA",
+            "description": "Stay up-to-date on news, live scores and stats with the NBA App:https://app.link.nba.com/-App22",
+            "url": "https://www.youtube.com/watch?v=a_hLgd8-Ry4",
+            "urlToImage": "https://i.ytimg.com/vi/a_hLgd8-Ry4/maxresdefault.jpg",
+            "publishedAt": "2022-05-16T13:00:01Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": "https://www.facebook.com/bbcnews",
+            "title": "Northern Ireland: PM meets Stormont parties to avert crisis - BBC",
+            "description": "Sinn Féin President Mary-Lou McDonald says Boris Johnson did not give straight answers during a tough meeting.",
+            "url": "https://www.bbc.com/news/uk-northern-ireland-61456677",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/E79F/production/_124759295_johnson_reuters.jpg",
+            "publishedAt": "2022-05-16T12:44:00Z",
+            "content": "Image source, Getty Images\r\nThe UK government is poised to introduce legislation that would allow ministers in London to override parts of the Brexit deal on Northern Ireland.\r\nForeign Secretary Liz … [+7013 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNBC"
+            },
+            "author": "Leslie Josephs",
+            "title": "JetBlue launches hostile takeover bid for Spirit Airlines - CNBC",
+            "description": "JetBlue wrote to Spirit shareholders Monday, offering $30 a share and encouraging them to vote against the Frontier deal.",
+            "url": "https://www.cnbc.com/2022/05/16/jetblue-launches-hostile-takeover-bid-for-spirit-airlines.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/107061533-1652703018960-img_2066.jpg?v=1652703099&w=1920&h=1080",
+            "publishedAt": "2022-05-16T12:29:08Z",
+            "content": "JetBlue Airways launched a hostile takeover bid of Spirit Airlines on Monday after that carrier rejected JetBlue's $33 per share, all-cash offer earlier this month.\r\nJetBlue has said acquiring Spirit… [+3960 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Page Six"
+            },
+            "author": "Francesca Bacardi",
+            "title": "Alabama Barker gives first look at newlyweds Travis, Kourtney Kardashian - Page Six",
+            "description": "The reality star and the Blink-182 drummer tied the knot in a courthouse ceremony in Santa Barbara, Calif., Sunday surrounded by only a few people.",
+            "url": "https://pagesix.com/2022/05/16/alabama-barker-gives-first-look-at-newlyweds-travis-kourtney/",
+            "urlToImage": "https://pagesix.com/wp-content/uploads/sites/3/2022/05/kourtney-kardashian-travis-barker-71.jpg?quality=75&strip=all&w=1200",
+            "publishedAt": "2022-05-16T12:16:00Z",
+            "content": "After Travis Barker and Kourtney Kardashian married in a surprise courthouse ceremony in Santa Barbara, Calif., Sunday, the Blink-182 drummer’s daughter, Alabama, went live on Instagram and gave fans… [+1816 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Variety"
+            },
+            "author": "Manori Ravindran",
+            "title": "‘Black Mirror’ Returns: New Series In the Works at Netflix (EXCLUSIVE) - Variety",
+            "description": "A new series of “Black Mirror” is in the works at Netflix, Variety can reveal. It’s been almost three years since Season 5 of the dystopian drama premiered on the streaming service in June 2019, but sources indicate that a new anthology series of “Black Mirro…",
+            "url": "https://variety.com/2022/tv/global/black-mirror-season-6-netflix-1235266891/",
+            "urlToImage": "https://variety.com/wp-content/uploads/2022/05/Black-Mirror.jpg?w=1000",
+            "publishedAt": "2022-05-16T12:11:00Z",
+            "content": "A new series of “Black Mirror” is in the works at Netflix, Variety can reveal.\r\nIt’s been almost three years since Season 5 of the dystopian drama premiered on the streaming service in June 2019, but… [+3639 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "New York Post"
+            },
+            "author": "Lee Brown",
+            "title": "Pastor, congregation hogtied Calif. gunman with extension cord during church shooting - New York Post ",
+            "description": "The gunman in a California church was tackled by a pastor — then ambushed by elderly parishioners, who hogtied his legs and wrangled away his two handguns, officials said.",
+            "url": "https://nypost.com/2022/05/16/pastor-congregation-hogtied-cali-gunman-with-extension-cord/",
+            "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2022/05/california-church-shooting-comp-1.jpg?quality=75&strip=all&w=1024",
+            "publishedAt": "2022-05-16T12:09:00Z",
+            "content": "The gunman who killed one and injured five others in a California church Sunday was tackled by a heroic retired pastor — then subdued by elderly parishioners, who hogtied his legs and wrangled away h… [+4326 chars]"
+        },
+        {
+            "source": {
+                "id": "the-wall-street-journal",
+                "name": "The Wall Street Journal"
+            },
+            "author": "Vivian Salama",
+            "title": "Ukraine’s Military Regains Ground in Northeast, Targets Another Russian River Crossing - The Wall Street Journal",
+            "description": "Kharkiv’s regional governor said that even as Ukraine wins back territory seized by Russia in recent months, the situation across the region remains extremely volatile.",
+            "url": "https://www.wsj.com/articles/ukraines-military-regains-ground-in-northeast-targets-another-russian-river-crossing-11652695700",
+            "urlToImage": "https://images.wsj.net/im-544875/social",
+            "publishedAt": "2022-05-16T12:05:00Z",
+            "content": "KYIV, UkraineUkrainian forces in the northeastern region of Kharkiv have regained territory at the Russian border, the regional governor said, while Russian forces continued to shell cities in Donbas… [+413 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "WRAL.com"
+            },
+            "author": "Jodi Leese Glusco",
+            "title": "Common virus may be linked to liver failure in healthy children - WRAL News",
+            "description": "Doctors around the world are trying to understand what is causing children to develop severe hepatitis (liver inflammation) that in some cases results in liver failure.",
+            "url": "https://www.wral.com/common-virus-may-be-linked-to-liver-failure-in-healthy-children/20278455/",
+            "urlToImage": "https://wwwcache.wral.com/asset/lifestyles/healthteam/2022/04/26/20252774/media-hypatia-h_e9c2889d4dc9aa791c3aacf75f9a650c-h_e5cf47970cd844715792b45bf7c6cfb2-300-DMID1-5uuuo5rsy-640x480.jpg",
+            "publishedAt": "2022-05-16T12:00:00Z",
+            "content": "By UNC Health Talk\r\nEditor's note: This article originally appeared on UNC Health Talk.\r\nDoctors around the world are trying to understand what is causing children to develop severe hepatitis (liver … [+4023 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "MacRumors"
+            },
+            "author": "Tim Hardwick",
+            "title": "Unbox Therapy Shares Hands-On Look at iPhone 14 Pro Max Replica - MacRumors",
+            "description": "YouTuber Unbox Therapy has shared a hands-on look at the iPhone 14 Pro Max using what he claims is a one-to-one replica created by third-party case...",
+            "url": "https://www.macrumors.com/2022/05/16/iphone-14-pro-max-replica-hands-on/",
+            "urlToImage": "https://images.macrumors.com/t/6pIuTQdgitfo9ak41zhBb5jD9J8=/1600x/article-new/2022/05/unbox-therapy-iphone-14-pro-max-replica.jpg",
+            "publishedAt": "2022-05-16T11:40:02Z",
+            "content": "YouTuber Unbox Therapy has shared a hands-on look at the iPhone 14 Pro Max using what he claims is a one-to-one replica created by third-party case makers with access to detailed schematics and dimen… [+2143 chars]"
+        },
+        {
+            "source": {
+                "id": "usa-today",
+                "name": "USA Today"
+            },
+            "author": "Katie Wadington, USA TODAY",
+            "title": "Ukraine live updates: Sweden weighs NATO; McDonald's will leave Russia - USA TODAY",
+            "description": "A day after Finland applied for NATO membership, neighbor Sweden looked to make its own historic application. Latest Ukraine updates.",
+            "url": "https://www.usatoday.com/story/news/politics/2022/05/16/ukraine-russia-invasion-live-updates/9789860002/",
+            "urlToImage": "https://www.gannett-cdn.com/presto/2022/05/16/USAT/a3835a9f-1668-4a3c-a877-999efc70fc81-AFP_AFP_32A84RK.jpg?auto=webp&crop=5969,3358,x0,y0&format=pjpg&width=1200",
+            "publishedAt": "2022-05-16T11:37:30Z",
+            "content": "In the latest corporate withdrawal from Russia, McDonald's said Monday that it has started the process of selling its Russian business, which includes 850 restaurants that employ 62,000 people.\r\nThe … [+4917 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "nj.com"
+            },
+            "author": "Jeff Goldman | NJ Advance Media for NJ.com",
+            "title": "Severe thunderstorms, 60 mph winds, hail in N.J. forecast. Latest on timing. - NJ.com",
+            "description": "The western half of New Jersey is under an enhanced threat of severe storms today. A tornado is also possible.",
+            "url": "https://www.nj.com/weather/2022/05/nj-weather-severe-thunderstorms-60-mph-winds-hail-in-forecast-latest-on-timing.html",
+            "urlToImage": "https://www.nj.com/resizer/qlvkJLc0CDW1jhAaK54uaKN6KQg=/1280x0/filters:focal(967x163:977x153)/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/BLDTJ5PO55CB3BPIEE2DLAVMFI.jpg",
+            "publishedAt": "2022-05-16T11:26:00Z",
+            "content": "Severe thunderstorms are likely to lash New Jersey later Monday with wind gusts of up to 60 mph, large hail and possible flash flooding, forecasters say.\r\nHeavy rain is likely to fall in northwestern… [+1672 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "New York Times"
+            },
+            "author": "Alan Rappeport, Liz Alderman",
+            "title": "Treasury Secretary Yellen Looks to Get Global Tax Deal Back on Track - The New York Times",
+            "description": "The Treasury secretary is traveling to Warsaw, Brussels and Bonn, Germany, this week at an uncertain time for the global economy.",
+            "url": "https://www.nytimes.com/2022/05/16/us/politics/treasury-yellen-europe-global-tax.html",
+            "urlToImage": "https://static01.nyt.com/images/2022/05/16/us/16dc-global-tax/merlin_205086873_89457618-df40-4147-a3fc-725dd80f1315-facebookJumbo.jpg",
+            "publishedAt": "2022-05-16T11:24:58Z",
+            "content": "I think the reality of turning a political commitment into binding domestic legislation is a lot more complex, said Manal Corwin, a Treasury official in the Obama administration who now heads the Was… [+2724 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "WGAL Susquehanna Valley Pa."
+            },
+            "author": null,
+            "title": "Lt. Gov John Fetterman held for observation at Lancaster hospital after suffering stroke - WGAL Susquehanna Valley Pa.",
+            "description": "Lt. Gov. John Fetterman, who is the leading Democrat candidate for Pennsylvania's open US Senate seat, is being held for observation at Lancaster General Hospital after he suffered a stroke.",
+            "url": "https://www.wgal.com/article/pennsylvania-lieutenant-governor-us-senate-candidate-john-fetterman-stroke/40007123",
+            "urlToImage": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/lt-governor-john-fetterman-stroke-1652699418.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*",
+            "publishedAt": "2022-05-16T11:17:00Z",
+            "content": "LANCASTER, Pa. —Lt. Gov. John Fetterman, who is the leading Democrat candidate for Pennsylvania's open US Senate seat, is being held for observation at Lancaster General Hospital after he suffered a … [+4532 chars]"
+        }
+    ]
+}

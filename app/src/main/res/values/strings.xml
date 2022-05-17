@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">That\'s News To Me!</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="loading">Loading</string>
+    <string name="article_photo">Article Photo</string>
+    <string name="api_key">e0af65fa2a144107bf0507819856f96c</string>
+    <string name="search">Search</string>
+    <string name="no_articles_found">No Articles Found</string>
+    <string name="back_to">Back To...</string>
+    <string name="title">Title...</string>
+    <string name="save_article">Save Article</string>
+    <string name="exit">Exit</string>
+    <string name="photo_for_article">Photo for article.</string>
+    <string name="list">List</string>
+
+</resources>
