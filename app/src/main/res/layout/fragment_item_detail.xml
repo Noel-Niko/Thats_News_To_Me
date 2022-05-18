@@ -8,24 +8,17 @@
     android:layout_height="match_parent"
     tools:ignore="MergeRootFrame">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appBar"
+            android:id="@+id/appBarDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent">
-
             <include
-                android:id="@+id/custom_toobar"
+                android:id="@+id/custom_toolbar"
                 layout="@layout/custom_toolbar" />
         </com.google.android.material.appbar.AppBarLayout>
 
-    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/item_detail_scroll_view"
@@ -33,31 +26,28 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp">
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="4dp"
-                android:layout_weight="1"
-                android:contentDescription="@string/article_photo"
-                app:layout_constraintBottom_toTopOf="@+id/title"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width = "match_parent"
+            android:id="@+id/cardviewLinearLayout2"
+            android:layout_margin="6dp">
 
-            <TextView
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="@string/photo_for_article"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_baseline_image_not_supported_24" />
+
+                <TextView
                 android:id="@+id/title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/text_margin"
                 android:layout_marginTop="12dp"
+                android:layout_below="@id/imageView"
                 android:textAppearance="?attr/textAppearanceListItem"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -65,16 +55,19 @@
 
             <TextView
                 android:id="@+id/description"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/text_margin"
                 android:textAppearance="?attr/textAppearanceListItem"
                 app:layout_constraintStart_toStartOf="@+id/title"
                 app:layout_constraintTop_toBottomOf="@+id/title"
+                android:layout_below="@id/title"
                 tools:text="Description" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+
     </androidx.core.widget.NestedScrollView>
 
 

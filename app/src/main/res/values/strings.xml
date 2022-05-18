@@ -6,11 +6,22 @@
     <string name="api_key">e0af65fa2a144107bf0507819856f96c</string>
     <string name="search">Search</string>
     <string name="no_articles_found">No Articles Found</string>
-    <string name="back_to">Back To...</string>
-    <string name="title">Title...</string>
+    <string name="back_to">Back To…</string>
+    <string name="title">Title…</string>
     <string name="save_article">Save Article</string>
     <string name="exit">Exit</string>
     <string name="photo_for_article">Photo for article.</string>
     <string name="list">List</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="saved_articles">Saved Articles</string>
+    <string name="see_saved_articles">See Saved Articles</string>
+    <string name="delete_article">Delete</string>
+    <string name="nothing_saved">You do not have any saved articles yet.</string>
+    <string name="delete_success">The article was deleted from your saved collection.</string>
+    <string name="success_saved">This article was saved in your collection.</string>
+    <string name="view_saved_articles">View Saved Articles</string>
+    <string name="nothing_found">No articles found for search criteria.</string>
+    <string name="to_list">To List</string>
 
 </resources>

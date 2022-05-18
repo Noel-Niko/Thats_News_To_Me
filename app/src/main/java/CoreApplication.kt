@@ -6,6 +6,7 @@ import android.util.Log
 import com.axxess.palliative.service.koin.module.NetworkModule
 import com.facebook.stetho.BuildConfig
 import com.facebook.stetho.Stetho
+import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.service.koin.module.DatabaseModule
 import okhttp3.OkHttpClient
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.component.KoinComponent
@@ -48,7 +49,8 @@ class CoreApplication : Application(), KoinComponent {
             androidContext(this@CoreApplication)
             modules(
                 listOf(
-                    NetworkModule
+                    NetworkModule,
+                    DatabaseModule
                 )
             )
         }

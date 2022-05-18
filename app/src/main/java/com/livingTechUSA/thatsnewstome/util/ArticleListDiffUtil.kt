@@ -21,13 +21,12 @@ class ArticleListDiffUtil(
         }
 
         override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-            return oldArticleList[oldItemPosition].uniqueID == newArticleList[newItemPosition].uniqueID
+            return oldArticleList[oldItemPosition].title == newArticleList[newItemPosition].title
         }
 
         //Called if areItemsTheSame == true
         override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-            //Checking only MRN for efficiency as the Patient List Screen does not modify Patients
-            return oldArticleList[oldItemPosition].title == newArticleList[newItemPosition].title
+             return oldArticleList[oldItemPosition].title == newArticleList[newItemPosition].title
         }
     }
 

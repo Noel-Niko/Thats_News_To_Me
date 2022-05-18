@@ -1,6 +1,7 @@
-package com.livingTechUSA.thatsnewstome.screens.ItemList
+package com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.screens.SavedList
 
 import android.content.Context
+import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.database.localService.ILocalService
 import com.livingTechUSA.thatsnewstome.model.article.Article
 import com.livingTechUSA.thatsnewstome.service.api.NewsApiResponse
 import com.livingTechUSA.thatsnewstome.service.coroutines.IAppDispatchers
@@ -10,12 +11,12 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-import retrofit2.Call
 import kotlin.coroutines.CoroutineContext
 
-class ItemListModel : CoroutineScope, KoinComponent {
+class SavedArticlesModel : CoroutineScope, KoinComponent {
     private val mContext: Context by inject()
     private val appDispatchers: IAppDispatchers by inject()
+    private val localServiceProvider:ILocalService by inject()
     private val articles: MutableList<Article> = mutableListOf()
 
     private val job: Job = SupervisorJob()
@@ -26,13 +27,12 @@ class ItemListModel : CoroutineScope, KoinComponent {
     private var category: String = "general"
     private var mSearchQuery: String = ""
     private var mIsSearchSelected = false
-    private var mIsSearchQueryListenerEnable = true
+    private var mIsSearchQueryListenerEnable = false
     private var mIsArticleSelected = false
 
     val manager: RequestManager = RequestManager(mContext)
 
-    suspend fun getNewsHeadlines(): NewsApiResponse? =
-        manager.getNewsHeadlines(country, category, mSearchQuery)
+    suspend fun getNewsHeadlines(): List<Article> = localServiceProvider.getAllFromArticleTable()
 
 
     fun changeSearchQuery(query: String) {
@@ -49,7 +49,7 @@ class ItemListModel : CoroutineScope, KoinComponent {
         country = newCountry
     }
 
-    fun getScountry(): String = country
+    fun getCountry(): String = country
 
     fun clearCountryQuery() {
         country = ""

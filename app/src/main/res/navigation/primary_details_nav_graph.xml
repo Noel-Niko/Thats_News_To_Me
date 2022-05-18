@@ -25,6 +25,23 @@
             app:argType="com.livingTechUSA.thatsnewstome.model.article.Article" />
         <action
             android:id="@+id/action_itemDetailFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/itemDetailFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_itemDetailFragment_to_savedArticlesFragment"
+            app:destination="@id/savedArticlesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedArticlesFragment"
+        android:name="com.livingTechUSA.thatsnewstome.screens.SavedList.SavedArticlesFragment"
+        android:label="SavedArticlesFragment" >
+        <action
+            android:id="@+id/action_savedArticlesFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_savedArticlesFragment_to_itemListFragment"
             app:destination="@id/itemListFragment" />
     </fragment>
 </navigation>

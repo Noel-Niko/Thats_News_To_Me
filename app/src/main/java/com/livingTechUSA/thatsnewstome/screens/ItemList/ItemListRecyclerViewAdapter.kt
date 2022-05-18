@@ -9,15 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.thatsnewstome.R
 import com.example.thatsnewstome.databinding.ItemListContentBinding
-import com.google.android.material.internal.ContextUtils.getActivity
-import com.livingTechUSA.thatsnewstome.Base.BaseViewHolder
 import com.livingTechUSA.thatsnewstome.model.article.Article
 import com.livingTechUSA.thatsnewstome.util.Constant
 import com.livingTechUSA.thatsnewstome.util.Ui
@@ -49,80 +44,6 @@ class ItemListRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.onBind(position)
-
-        //        val item = articles[position]
-//        //holder.image.
-//        holder.title.text = item.title
-//        holder.description.text = item.content
-//
-//        with(holder.itemView) {
-//            tag = item
-//            setOnClickListener { itemView ->
-//                val bundle = Bundle()
-//
-//
-//                val item =
-//                    itemView.tag as com.livingTechUSA.thatsnewstome.placeholder .PlaceholderContent.PlaceholderItem
-//
-//                bundle.putString(
-//                    com.livingTechUSA.thatsnewstome.screens.ItemDetail.ItemDetailFragment.ARG_ITEM_ID,
-//                    item.id
-//                )
-//                if (itemDetailFragmentContainer != null) {
-//                    itemDetailFragmentContainer.findNavController()
-//                        .navigate(com.example.thatsnewstome.R.id.fragment_item_detail, bundle)
-//                } else {
-//                    itemView.findNavController().navigate(
-//                        com.example.thatsnewstome.R.id.action_itemListFragment_to_item_detail_fragment,
-//                        bundle
-//                    )
-//                }
-//            }
-//            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-//                /**
-//                 * Context click listenerI to handle Right click events
-//                 * from mice and trackpad input to provide a more native
-//                 * experience on larger screen devices
-//                 */
-//                setOnContextClickListener { v ->
-//                    val item =
-//                        v.tag as com.livingTechUSA.thatsnewstome.placeholder.PlaceholderContent.PlaceholderItem
-//                    android.widget.Toast.makeText(
-//                        v.context,
-//                        "Context click of item " + item.id,
-//                        android.widget.Toast.LENGTH_LONG
-//                    ).show()
-//                    true
-//                }
-//            }
-//
-//            setOnLongClickListener { v ->
-//                // Setting the item id as the clip data so that the drop target is able to
-//                // identify the id of the content
-//                val clipItem = android.content.ClipData.Item(item.uniqueID)
-//                val dragData = ClipData(
-//                    v.tag as? CharSequence,
-//                    arrayOf(android.content.ClipDescription.MIMETYPE_TEXT_PLAIN),
-//                    clipItem
-//                )
-//
-//                if (android.os.Build.VERSION.SDK_INT >= 24) {
-//                    v.startDragAndDrop(
-//                        dragData,
-//                        android.view.View.DragShadowBuilder(v),
-//                        null,
-//                        0
-//                    )
-//                } else {
-//                    v.startDrag(
-//                        dragData,
-//                        android.view.View.DragShadowBuilder(v),
-//                        null,
-//                        0
-//                    )
-//                }
-//            }
-//        }
     }
 
 
@@ -137,9 +58,15 @@ class ItemListRecyclerViewAdapter(
     fun updateList(patients: List<Article>) {
         articles.clear()
         articles.addAll(patients)
-        val diffCallBack = ArticleListDiffUtil.PatientListDiffCallback(savedArticleList, articles)
-        val diffResult = DiffUtil.calculateDiff(diffCallBack)
-        diffResult.dispatchUpdatesTo(this)
+        notifyDataSetChanged()
+        /*TODO: Address glich with diffCallBack causing crash:
+        java.lang.IndexOutOfBoundsException: Inconsistency detected. Invalid view holder adapter positionViewHolder{3...
+        ...due to the mashMap being recreated by the navGraph with each return to prior
+        screen resulting in discrepencies when calculating recyclerview positions.
+         */
+//        val diffCallBack = ArticleListDiffUtil.PatientListDiffCallback(savedArticleList, articles)
+//        val diffResult = DiffUtil.calculateDiff(diffCallBack)
+//        diffResult.dispatchUpdatesTo(this)
         savedArticleList.clear()
         savedArticleList.addAll(articles)
 
@@ -186,7 +113,7 @@ class ItemListRecyclerViewAdapter(
             }
 
             override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                return oldArticleList[oldItemPosition].uniqueID == newArticleList[newItemPosition].uniqueID
+                return oldArticleList[oldItemPosition].title == newArticleList[newItemPosition].title
             }
 
             //Called if areItemsTheSame == true
@@ -199,10 +126,6 @@ class ItemListRecyclerViewAdapter(
 
     inner class ViewHolder(context: Context, val binding: ItemListContentBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        private val mGrayColor =
-            Ui.getColorInt(context, androidx.appcompat.R.color.primary_dark_material_light)
-        private val mWhiteColor = Ui.getColorInt(context, R.color.white)
-        private val mBlackColor = Ui.getColorInt(context, R.color.black)
         val image: ImageView = binding.imageView
         val title: TextView = binding.title
         val description: TextView = binding.description

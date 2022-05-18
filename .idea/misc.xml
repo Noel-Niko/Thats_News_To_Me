@@ -10,12 +10,15 @@
         <entry key="app/src/main/res/layout-sw600dp/fragment_item_list.xml" value="0.20234375" />
         <entry key="app/src/main/res/layout/activity_item_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/custom_toolbar.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/fragment_item_detail.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/custom_toolbar2.xml" value="0.1796875" />
+        <entry key="app/src/main/res/layout/fragment_item_detail.xml" value="0.14749893116716545" />
         <entry key="app/src/main/res/layout/fragment_item_list.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/item_list_content.xml" value="0.30185185185185187" />
+        <entry key="app/src/main/res/layout/fragment_saved_articles.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_list_content.xml" value="0.1" />
         <entry key="app/src/main/res/layout/layout_hospice_loading.xml" value="0.1" />
         <entry key="app/src/main/res/layout/layout_loading.xml" value="0.16197916666666667" />
         <entry key="app/src/main/res/layout/patient_info_custom_toolbar.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/hamburger.xml" value="0.31979166666666664" />
       </map>
     </option>
   </component>
@@ -24,5 +27,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>

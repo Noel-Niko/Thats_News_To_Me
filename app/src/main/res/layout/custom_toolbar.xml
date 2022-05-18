@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hamburgerMenuIcon"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -21,8 +22,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/back_to"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/backArrowImageView"
         app:layout_constraintTop_toBottomOf="@+id/pageTitle" />
 
@@ -40,47 +43,92 @@
 
 
     <TextView
-        android:id="@+id/menu_text"
+        android:id="@+id/nav_to_saved"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/see_saved_articles"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete" />
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/delete_article"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/nav_to_saved"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="16dp"
         android:text="@string/save_article"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/backTo_Label"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/backTo_Label"
+        app:layout_constraintTop_toBottomOf="@+id/nav_to_saved"
         tools:visibility="visible" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/articleSearchView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="8dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
-        android:drawablePadding="6dp"
-        android:gravity="start|center_vertical"
-        android:hint="@string/search"
-        android:inputType="text"
-        android:maxLines="1"
-        android:textColor="@color/grey"
-        android:textColorHint="@color/grey"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/backTo_Label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/backTo_Label"
-        app:layout_constraintTop_toTopOf="@+id/backTo_Label"
-        tools:visibility="visible" />
-
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchView"
+    <ImageView
+        android:id="@+id/hamburger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/backTo_Label"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/backTo_Label" />
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_baseline_menu_24" />
+
+    <!--    <androidx.appcompat.widget.AppCompatEditText-->
+    <!--        android:id="@+id/articleSearchView"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_margin="8dp"-->
+    <!--        android:layout_marginStart="4dp"-->
+    <!--        android:layout_marginEnd="4dp"-->
+    <!--        android:drawablePadding="6dp"-->
+    <!--        android:gravity="start|center_vertical"-->
+    <!--        android:hint="@string/search"-->
+    <!--        android:inputType="text"-->
+    <!--        android:maxLines="1"-->
+    <!--        android:minHeight="48dp"-->
+    <!--        android:textColor="@color/grey"-->
+    <!--        android:textColorHint="@color/grey"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/backTo_Label"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="1.0"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/backTo_Label"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/backTo_Label"-->
+    <!--        tools:visibility="visible" />-->
+
+    <!--    <androidx.appcompat.widget.SearchView-->
+    <!--        android:id="@+id/searchView"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="8dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/backTo_Label"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/backTo_Label" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
