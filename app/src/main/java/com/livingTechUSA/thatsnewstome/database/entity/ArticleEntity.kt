@@ -10,24 +10,24 @@ import java.util.concurrent.atomic.AtomicInteger
 @Entity(tableName = "articleTable")
 data class ArticleEntity(
     @PrimaryKey(autoGenerate = true) @SerializedName("uniqueId")
-    val uniqueId: Long = 0L,
+    var uniqueId: Long = 0L,
     @SerializedName("id")
-    val id: String? = null,
+    var id: String? = null,
     @SerializedName("name")
-    val name: String? = null,
+    var name: String? = null,
     @SerializedName("author")
-    val author: String? = null,
+    var author: String? = null,
     @SerializedName("title")
-    val title: String? = null,
+    var title: String? = null,
     @SerializedName("description")
-    val description: String? = null,
+    var description: String? = null,
     @SerializedName("url")
-    val url: String? = "",
+    var url: String? = "",
     @SerializedName("urlToImage")
-    val urlToImage: String? = "",
+    var urlToImage: String? = "",
     @SerializedName("publishedAt")
-    val publishedAt: String? = "",
+    var publishedAt: String? = "",
     @SerializedName("content")
-    val content: String? = "") {
+    var content: String? = "") {
 
 }

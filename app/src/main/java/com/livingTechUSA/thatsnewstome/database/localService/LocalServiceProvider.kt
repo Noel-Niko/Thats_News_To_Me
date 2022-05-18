@@ -18,7 +18,7 @@ class LocalServiceProvider(
     override suspend fun removeArticle(article: Article) {
         val DB = article.toEntity()
         if (DB.title != null) {
-            articleDao.removeArticle(DB.uniqueId, DB.title)
+            articleDao.removeArticle(DB.uniqueId, DB.title!!)
         }
     }
 

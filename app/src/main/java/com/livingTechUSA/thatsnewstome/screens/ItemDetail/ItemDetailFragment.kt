@@ -1,21 +1,20 @@
 package com.livingTechUSA.thatsnewstome.screens.ItemDetail
 
-import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.*
-import androidx.fragment.app.Fragment
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.thatsnewstome.R
 import com.example.thatsnewstome.databinding.FragmentItemDetailBinding
-
 import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.database.localService.ILocalService
 import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.screens.ItemDetail.ItemDetailModel
 import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.screens.ItemDetail.ItemDetailPresenter
 import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.screens.ItemDetail.ItemDetailView
-import com.livingTechUSA.thatsnewstome.model.article.Article
 import com.livingTechUSA.thatsnewstome.screens.SavedList.SavedArticlesFragment
 import com.livingTechUSA.thatsnewstome.service.coroutines.IAppDispatchers
 import com.squareup.picasso.Picasso
@@ -80,6 +79,16 @@ class ItemDetailFragment() : Fragment(), ItemDetailView, CoroutineScope, KoinCom
         presenter.onCreated()
         setHasOptionsMenu(true)
 
+        binding.Date?.text = args.article.publishedAt
+        binding.fullTextUrl?.text = args.article.url
+        binding.fullTextUrl?.setTextColor(resources.getColor(R.color.blue))
+        binding.fullTextUrl?.setOnClickListener {
+            val text: String = binding.fullTextUrl?.text as String
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(text))
+            startActivity(browserIntent)
+        }
+
+        binding.sourceName?.text = args.article.name
 
         binding.customToolbar?.backToLabel?.text = getString(R.string.list)
         //binding.customToolbar?.articleSearchView?.visibility = View.GONE
