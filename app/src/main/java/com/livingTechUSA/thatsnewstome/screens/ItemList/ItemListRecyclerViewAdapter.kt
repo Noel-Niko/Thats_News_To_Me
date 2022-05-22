@@ -61,7 +61,7 @@ class ItemListRecyclerViewAdapter(
         notifyDataSetChanged()
         /*TODO: Address glich with diffCallBack causing crash:
         java.lang.IndexOutOfBoundsException: Inconsistency detected. Invalid view holder adapter positionViewHolder{3...
-        ...due to the mashMap being recreated by the navGraph with each return to prior
+        ...due to the hashMap being recreated by the navGraph with each return to prior
         screen resulting in discrepencies when calculating recyclerview positions.
          */
 //        val diffCallBack = ArticleListDiffUtil.PatientListDiffCallback(savedArticleList, articles)

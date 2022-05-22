@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.runner.AndroidJUnit4
-import com.axxess.palliative.TestUtil
+import com.axxess.palliative.RoomTestUtil
 import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.database.NewsDatabase
 import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.database.dao.ArticleDao
 import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.database.entity.ArticleEntity
@@ -35,7 +35,7 @@ class NewsDatabaseTest {
     @Test
     fun testWriteAndReadArticleAntity() = runBlocking {
         //GIVEN
-        val article: ArticleEntity = TestUtil.createArticleEntity().apply {
+        val article: ArticleEntity = RoomTestUtil.createArticleEntity().apply {
             uniqueId = 0L
             id = "id"
             name = "a name"

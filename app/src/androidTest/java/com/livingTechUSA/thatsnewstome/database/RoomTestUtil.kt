@@ -4,7 +4,7 @@ import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.database.
 
 
 
-object TestUtil {
+object RoomTestUtil {
 
     fun createArticleEntity() = ArticleEntity(
         uniqueId = 0L,

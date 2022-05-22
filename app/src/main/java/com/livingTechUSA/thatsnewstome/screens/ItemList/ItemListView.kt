@@ -14,7 +14,6 @@ interface ItemListView {
 //    fun clearSearchTextIfAny()
 //    fun setSearchQueryTextListener()
 //    fun showErrorMessage(show: Boolean, message: String)
-    fun showLoading(bool: Boolean)
     suspend fun updateList(articleList: List<Article>)
     fun initPresenter(): ItemListPresenter
     suspend fun showNews(newsHeadlines: List<Article>)

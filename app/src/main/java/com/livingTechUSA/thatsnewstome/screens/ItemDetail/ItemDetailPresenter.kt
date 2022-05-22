@@ -39,6 +39,5 @@ class ItemDetailPresenter(
         if(selectedArticle != null){
             mModel.setArticle(selectedArticle)
         }
-
     }
 }

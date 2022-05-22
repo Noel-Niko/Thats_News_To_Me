@@ -7,8 +7,13 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
@@ -18,10 +23,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.thatsnewstome.R
 import com.example.thatsnewstome.databinding.FragmentItemListBinding
+import com.google.android.material.progressindicator.CircularProgressIndicator
 import com.livingTechUSA.thatsnewstome.model.article.Article
-import com.livingTechUSA.thatsnewstome.service.api.NewsApiResponse
 import com.livingTechUSA.thatsnewstome.service.coroutines.IAppDispatchers
-import com.livingTechUSA.thatsnewstome.service.remoteService.IOnFetchDataListener
 import kotlinx.coroutines.*
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -29,7 +33,6 @@ import kotlin.coroutines.CoroutineContext
 
 class ItemListFragment : Fragment(), ItemListView, CoroutineScope, KoinComponent {
     val appDispatcher: IAppDispatchers by inject()
-    private val listener: IOnFetchDataListener<NewsApiResponse> by inject()
 private val job: Job = SupervisorJob()
     override val coroutineContext: CoroutineContext
         get() = appDispatcher.io() + job
@@ -37,11 +40,9 @@ private val job: Job = SupervisorJob()
 
     private lateinit var presenter: ItemListPresenter
     private lateinit var itemListAdapter: ItemListRecyclerViewAdapter
-    private val nLoading: View? by lazy { inflateLoaderLayout() }
     private var articleList = mutableListOf<Article>()
     private var _binding: FragmentItemListBinding? = null
     private val binding get() = _binding!!
-
 
     open fun inflateLoaderLayout(): View? = null
 
@@ -49,17 +50,14 @@ private val job: Job = SupervisorJob()
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        initPresenter()
         _binding = FragmentItemListBinding.inflate(inflater, container, false)
-        setHasOptionsMenu(true)
+        initPresenter()
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val recyclerView: RecyclerView? = binding.articleListRecyclerView
-
-
         val itemDetailFragmentContainer: View? = view.findViewById(R.id.item_detail_nav_container)
         itemListAdapter = ItemListRecyclerViewAdapter(
             articleList,  itemDetailFragmentContainer,
@@ -73,8 +71,6 @@ private val job: Job = SupervisorJob()
         }
         binding.customToobar?.pageTitle?.text = getString(R.string.app_name)
         binding.customToobar?.backToLabel?.text = getString(R.string.exit)
-//        binding.customToobar?.searchView?.visibility = View.VISIBLE
-//        binding.customToobar?.articleSearchView?.elevation = 3.0F
         presenter.onCreated()
     }
 
@@ -104,10 +100,9 @@ private val job: Job = SupervisorJob()
 
 
     override suspend fun showNews(newsHeadlines: List<Article>) {
-        showLoading(true)
-        updateList(newsHeadlines)
-        showLoading(false)
-    }
+            updateList(newsHeadlines)
+        }
+
 
 
     override fun showNoArticlesFound(show: Boolean) {
@@ -124,14 +119,10 @@ private val job: Job = SupervisorJob()
 
     }
 
-    override fun showLoading(loading: Boolean) {
-        if (loading != null) {
-            nLoading?.bringToFront()
-            nLoading?.visibility = if (loading) View.VISIBLE else View.GONE
-        }
-    }
+
 
     override suspend fun updateList(articleList: List<Article>) {
+        launch(appDispatcher.ui()) { binding.progressBar?.visibility = View.VISIBLE }
         coroutineScope {
             val job = launch {
                 itemListAdapter?.clearArticles()
@@ -141,6 +132,7 @@ private val job: Job = SupervisorJob()
                 itemListAdapter?.updateList(articleList)
                 showNoArticlesFound(articleList.isEmpty())
             }
+            launch(appDispatcher.ui()) { binding.progressBar?.visibility = View.GONE }
         }
     }
 

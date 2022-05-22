@@ -49,7 +49,7 @@ class ItemListModel : CoroutineScope, KoinComponent {
         country = newCountry
     }
 
-    fun getScountry(): String = country
+    fun getCountry(): String = country
 
     fun clearCountryQuery() {
         country = ""

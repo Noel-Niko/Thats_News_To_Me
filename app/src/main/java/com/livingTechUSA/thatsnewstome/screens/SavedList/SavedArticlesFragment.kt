@@ -16,16 +16,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.thatsnewstome.R
 import com.example.thatsnewstome.databinding.FragmentSavedArticlesBinding
-import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.database.localService.ILocalService
 import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.screens.SavedList.SavedArticlesModel
 import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.screens.SavedList.SavedArticlesPresenter
 import com.livingTechUSA.thatsnewstome.com.livingTechUSA.thatsnewstome.screens.SavedList.SavedArticlesView
 import com.livingTechUSA.thatsnewstome.model.article.Article
-import com.livingTechUSA.thatsnewstome.screens.ItemDetail.ItemDetailFragmentDirections
 import com.livingTechUSA.thatsnewstome.screens.ItemList.ItemListRecyclerViewAdapter
 import com.livingTechUSA.thatsnewstome.service.coroutines.IAppDispatchers
-import com.livingTechUSA.thatsnewstome.service.remoteService.IOnFetchDataListener
-import com.squareup.picasso.Picasso
 import kotlinx.coroutines.*
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject

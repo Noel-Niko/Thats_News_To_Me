@@ -150,45 +150,6 @@ class ItemDetailFragment() : Fragment(), ItemDetailView, CoroutineScope, KoinCom
     }
 
 
-    override fun onCreateOptionsMenu(menu: Menu, menuInflater: MenuInflater) {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.hamburger, menu)
-        return super.onPrepareOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.save -> launch(appDispatcher.io()) {
-                localService.insertArticle(args.article)
-                launch(appDispatcher.ui()) {
-                    Toast.makeText(
-                        context,
-                        getString(R.string.success_saved),
-                        Toast.LENGTH_SHORT
-                    )
-                        .show()
-                }
-            }
-            R.id.viewSaved -> launch(appDispatcher.io()) { navigateToSavedArticles() }
-            R.id.delete -> launch(appDispatcher.io()) {
-                localService.removeArticle(args.article)
-                launch(appDispatcher.ui()) {
-                    Toast.makeText(
-                        context,
-                        getString(R.string.delete_success),
-                        Toast.LENGTH_SHORT
-                    )
-                        .show()
-                }
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-    override fun setMenuVisibility(menuVisible: Boolean) {
-        super.setMenuVisibility(menuVisible)
-    }
-
     override fun initPresenter(): ItemDetailPresenter {
         presenter = ItemDetailPresenter(this, ItemDetailModel())
         return presenter

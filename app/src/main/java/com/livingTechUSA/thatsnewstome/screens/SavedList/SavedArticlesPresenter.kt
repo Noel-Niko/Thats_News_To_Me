@@ -20,12 +20,12 @@ class SavedArticlesPresenter (
     private val job: Job = SupervisorJob()
     override val coroutineContext: CoroutineContext
         get() = job + appDispatchers.ui()
-//    private val BEGIN_SEARCH_AFTER_MILLIS = 500L
-//
-//    private var update = false
-//    private var country: String = "us"
-//    private var category: String = "general"
-//    private var searchQuery: String = ""
+    private val BEGIN_SEARCH_AFTER_MILLIS = 500L
+
+    private var update = false
+    private var country: String = "us"
+    private var category: String = "general"
+    private var searchQuery: String = ""
 
     override fun onCreated() {
         super.onCreated()

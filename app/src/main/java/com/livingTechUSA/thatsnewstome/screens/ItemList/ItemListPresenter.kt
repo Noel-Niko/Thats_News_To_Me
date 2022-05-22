@@ -42,7 +42,6 @@ class ItemListPresenter(
             mView.showNews(articleList)
           //  mView.setSearchQueryTextListener()
         }
-
     }
 
         override fun onResume() {
