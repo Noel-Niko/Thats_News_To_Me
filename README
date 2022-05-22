@@ -1,1 +1,3 @@
-Project designed to illustrate use of Jetpack Navigation and Room.
+This project makes API calls with REST(Retrofit),
+and is designed to illustrate use of Jetpack Navigation and Room,
+as well as an Android Test for Database Integrity.

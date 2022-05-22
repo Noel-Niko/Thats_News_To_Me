@@ -10,10 +10,6 @@ import com.livingTechUSA.thatsnewstome.service.coroutines.IAppDispatchers
 import kotlinx.coroutines.*
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-import retrofit2.Call
-import retrofit2.Retrofit
-import retrofit2.await
-import retrofit2.converter.gson.GsonConverterFactory
 import java.lang.Exception
 import kotlin.coroutines.CoroutineContext
 
