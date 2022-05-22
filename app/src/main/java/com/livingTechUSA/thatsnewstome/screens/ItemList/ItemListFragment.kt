@@ -125,27 +125,17 @@ private val job: Job = SupervisorJob()
         launch(appDispatcher.ui()) { binding.progressBar?.visibility = View.VISIBLE }
         coroutineScope {
             val job = launch {
-                itemListAdapter?.clearArticles()
+                itemListAdapter.clearArticles()
             }
             job.join()
             launch(appDispatcher.ui()) {
-                itemListAdapter?.updateList(articleList)
+                itemListAdapter.updateList(articleList)
                 showNoArticlesFound(articleList.isEmpty())
             }
             launch(appDispatcher.ui()) { binding.progressBar?.visibility = View.GONE }
         }
     }
 
-
-    override fun showRecyclerViewLoader() {
-        itemListAdapter?.showLoading()
-        binding.nLoader?.hospiceLoading?.visibility = View.VISIBLE
-    }
-
-    override fun hideRecyclerViewLoader() {
-        itemListAdapter?.hideLoading()
-        binding.nLoader?.hospiceLoading?.visibility = View.GONE
-    }
 
 //
 //    override fun showSearchViewEndDrawable(show: Boolean) {

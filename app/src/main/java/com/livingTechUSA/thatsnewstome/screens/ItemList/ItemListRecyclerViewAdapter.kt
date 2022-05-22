@@ -72,23 +72,6 @@ class ItemListRecyclerViewAdapter(
 
     }
 
-    // Show/Hide loader
-    fun showLoading() {
-        if (!mIsLoaderVisible) {
-            for (it in articles)
-                savedArticleList.add(it)
-
-        }
-        mIsLoaderVisible = true
-    }
-
-
-    fun hideLoading() {
-        if (articles.isNotEmpty() && mIsLoaderVisible) {
-            mIsLoaderVisible = false
-        }
-    }
-
 
     fun clearArticles() {
         articles.clear()

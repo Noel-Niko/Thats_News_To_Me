@@ -70,14 +70,12 @@ class SavedArticlesFragment: Fragment(), SavedArticlesView, CoroutineScope, Koin
         if (recyclerView != null) {
             setupRecyclerView(recyclerView)
         }
-        binding.customToobar?.pageTitle?.text = getString(R.string.app_name)
-        binding.customToobar.backToLabel?.text = getString(R.string.to_list)
+        binding.customToobar.pageTitle?.text = getString(R.string.app_name)
+        binding.customToobar.backToLabel.text = getString(R.string.to_list)
         binding.customToobar.backArrowImageView.setOnClickListener{
             val action = SavedArticlesFragmentDirections.actionSavedArticlesFragmentToItemListFragment()
             view.findNavController().navigate(action)
         }
-//        binding.customToobar?.searchView?.visibility = View.VISIBLE
-//        binding.customToobar?.articleSearchView?.elevation = 3.0F
         presenter.onCreated()
     }
 
@@ -101,15 +99,13 @@ class SavedArticlesFragment: Fragment(), SavedArticlesView, CoroutineScope, Koin
     ) {
         recyclerView.adapter = itemListAdapter
         val linearLayoutManager = LinearLayoutManager(activity)
-        binding.articleListRecyclerView?.layoutManager = linearLayoutManager
-        binding.articleListRecyclerView?.adapter = itemListAdapter
+        binding.articleListRecyclerView.layoutManager = linearLayoutManager
+        binding.articleListRecyclerView.adapter = itemListAdapter
     }
 
 
     override suspend fun showNews(newsHeadlines: List<Article>) {
-        showLoading(true)
         updateList(newsHeadlines)
-        showLoading(false)
     }
 
 
@@ -127,36 +123,23 @@ class SavedArticlesFragment: Fragment(), SavedArticlesView, CoroutineScope, Koin
 
     }
 
-    override fun showLoading(loading: Boolean) {
-        if (loading != null) {
-            nLoading?.bringToFront()
-            nLoading?.visibility = if (loading) View.VISIBLE else View.GONE
-        }
-    }
-
     override suspend fun updateList(articleList: List<Article>) {
+        launch(appDispatcher.ui()) { binding.progressBar2.visibility = View.GONE }
+
         coroutineScope {
             val job = launch {
-                itemListAdapter?.clearArticles()
+                itemListAdapter.clearArticles()
             }
             job.join()
             launch(appDispatcher.ui()) {
-                itemListAdapter?.updateList(articleList)
+                itemListAdapter.updateList(articleList)
                 showNoArticlesFound(articleList.isEmpty())
             }
         }
+        launch(appDispatcher.ui()) { binding.progressBar2?.visibility = View.GONE }
+
     }
 
-
-    override fun showRecyclerViewLoader() {
-        itemListAdapter?.showLoading()
-        binding.nLoader?.hospiceLoading?.visibility = View.VISIBLE
-    }
-
-    override fun hideRecyclerViewLoader() {
-        itemListAdapter?.hideLoading()
-        binding.nLoader?.hospiceLoading?.visibility = View.GONE
-    }
 
 //    override fun showSearchViewEndDrawable(show: Boolean) {
 //        if (show) {

@@ -38,7 +38,7 @@ class RequestManager(var context: Context): CallNewsApi, CoroutineScope, KoinCom
                        .callHeadlines(country, category, query, context.getString(R.string.api_key))
                }
            }
-           val result = _result?.await()
+           val result = _result.await()
            return result
 
         } catch (e: Exception) {
@@ -55,15 +55,7 @@ class RequestManager(var context: Context): CallNewsApi, CoroutineScope, KoinCom
         }
         return null
     }
-//    interface CallNewsApi {
-//        @GET("top-headlines")
-//        suspend fun callHeadlines(
-//            @Query("country") country: String?,
-//            @Query("category") category: String?,
-//            @Query("q") query: String?,
-//            @Query("apiKey") api_key: String?
-//        ): Call<NewsApiResponse?>?
-//    }
+
 
     override suspend fun callHeadlines(
         country: String?,

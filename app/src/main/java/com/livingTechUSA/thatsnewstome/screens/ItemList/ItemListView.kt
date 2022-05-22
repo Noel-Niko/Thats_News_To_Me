@@ -8,8 +8,6 @@ interface ItemListView {
 
     fun showNoArticlesFound(show: Boolean)
     fun navigateToArticleDetail(article: Article)
-    fun showRecyclerViewLoader()
-    fun hideRecyclerViewLoader()
 //    fun showSearchViewEndDrawable(show: Boolean)
 //    fun clearSearchTextIfAny()
 //    fun setSearchQueryTextListener()

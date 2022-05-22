@@ -61,10 +61,6 @@
         tools:text="No Articles Found" />
 
 
-    <include
-        android:id="@+id/nLoader"
-        layout="@layout/layout_loading" />
-
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"

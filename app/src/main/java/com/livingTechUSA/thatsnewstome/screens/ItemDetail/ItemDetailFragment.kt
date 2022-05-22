@@ -56,7 +56,6 @@ class ItemDetailFragment() : Fragment(), ItemDetailView, CoroutineScope, KoinCom
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
 
@@ -100,7 +99,7 @@ class ItemDetailFragment() : Fragment(), ItemDetailView, CoroutineScope, KoinCom
 
         binding.customToolbar?.hamburger?.visibility = View.VISIBLE
         binding.customToolbar?.hamburger?.setOnClickListener {
-            binding?.customToolbar?.hamburger?.visibility = View.GONE
+            binding.customToolbar?.hamburger?.visibility = View.GONE
             binding.customToolbar?.save?.visibility = View.VISIBLE
             binding.customToolbar?.navToSaved?.visibility = View.VISIBLE
             binding.customToolbar?.delete?.visibility = View.VISIBLE
@@ -142,7 +141,7 @@ class ItemDetailFragment() : Fragment(), ItemDetailView, CoroutineScope, KoinCom
                     binding.customToolbar?.save?.visibility = View.GONE
                     binding.customToolbar?.navToSaved?.visibility = View.GONE
                     binding.customToolbar?.delete?.visibility = View.GONE
-                    binding?.customToolbar?.hamburger?.visibility = View.VISIBLE
+                    binding.customToolbar?.hamburger?.visibility = View.VISIBLE
                 }
             }
         }

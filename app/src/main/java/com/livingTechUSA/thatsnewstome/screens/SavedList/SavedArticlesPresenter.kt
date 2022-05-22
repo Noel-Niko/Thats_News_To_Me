@@ -38,7 +38,6 @@ class SavedArticlesPresenter (
 
     override fun onResume() {
         super.onResume()
-        mView.showRecyclerViewLoader()
         //changeSearchQueryListenerState(true)
     }
 
